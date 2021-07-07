@@ -12,7 +12,7 @@ public class SoftwareDeveloperClub {
 		String location = "members.txt";
 		File file = new File(location);
 		List <ClubMember> list = new ArrayList<>();
-		List <String> list2 = new ArrayList<>();
+//		List <String> list2 = new ArrayList<>();
 		int num = 0;
 		
 
@@ -21,6 +21,7 @@ public class SoftwareDeveloperClub {
 			Scanner input = new Scanner(file);
 			input.nextLine();
 			while(input.hasNextLine()) {
+
 				String [] cmArr = input.nextLine().split("\\*\\*");
 
 				list.add(new ClubMember(cmArr[0], cmArr[1], cmArr[2], cmArr[3]));
@@ -39,7 +40,11 @@ public class SoftwareDeveloperClub {
 			switch(num) {
 			case 1:
 					for(ClubMember cm: list) {
-						System.out.printf("%-15s %-15s %-15s %-15s%n", cm.getName(), cm.getState(), cm.getCity(), cm.getFavoriteLanguage());
+//						System.out.printf("%-15s %-15s %-15s %-15s%n", cm.getName(), cm.getState(), cm.getCity(), cm.getFavoriteLanguage());
+						System.out.println("Name: " + cm.getName());
+						System.out.println("Location: " + cm.getCity() + "," + cm.getState());
+						System.out.println("Favorite Language: " + cm.getFavoriteLanguage());
+						System.out.println();
 
 					}
 					
